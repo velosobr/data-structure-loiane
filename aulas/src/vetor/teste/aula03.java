@@ -16,16 +16,16 @@ public class aula03 {
             System.out.println("O tamanho do vetor eh: " + (vetor.getTamanho() + 1));
             System.out.println(vetor.toString());
 
-            int i = 2;
+            int elementoIgual = 2;
+            System.out.println("O elemento " + elementoIgual + " eh igual a: " + vetor.buscaElemento(elementoIgual - 1));
 
-            System.out.println("O elemento "+ i +" eh igual a: "+vetor.buscaElemento(i-1));
+//aula 06 - usando if em modo ternário
+
+            String elementoExiste = "aurso";
+            System.out.println("O elemento " + elementoExiste + ((vetor.verificaSeExiste(elementoExiste)) ? " existe" : " não existe"));
 
         } catch (Exception e) {
-
             System.out.println(e.getCause());
         }
-
-
-
     }
 }

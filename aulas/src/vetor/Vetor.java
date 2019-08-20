@@ -22,7 +22,8 @@ public class Vetor {
         if (!(pos >= 0 && pos <= tamanho)) {
             throw new IllegalArgumentException("posicao inválida");
 
-        } return elementos[pos];
+        }
+        return elementos[pos];
     }
 
     public int getTamanho() {
@@ -47,5 +48,17 @@ public class Vetor {
         }
         s.append("]");
         return s.toString();
+    }
+
+    public boolean verificaSeExiste(String elemento) {
+
+        if (elemento != null) {
+            for (int i = 0; i < this.tamanho; i++) {
+                if (this.elementos[i].equals(elemento)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }
